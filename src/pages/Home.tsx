@@ -70,7 +70,7 @@ const Home = () => {
         
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
           <div className="max-w-4xl mx-auto fade-in-up">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hero-text-glow">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 hero-text-glow bounce-in">
               Securing, Scaling & Automating Your Business
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-white/90 fade-in-up delay-1">
@@ -82,7 +82,7 @@ const Home = () => {
             </p>
             <div className="fade-in-up delay-3">
               <Link to="/contact">
-                <Button size="lg" className="btn-hero text-lg px-8 py-4">
+                <Button size="lg" className="btn-hero text-lg px-8 py-4 loading-pulse">
                   Get a Free Audit
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -104,10 +104,10 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={service.title} className="card-elegant hover:shadow-xl transition-all duration-300">
+              <Card key={service.title} className={`card-elegant hover:shadow-xl transition-all duration-300 fade-in-up delay-${index + 1}`}>
                 <CardContent className="p-8 text-center">
                   <div className="mb-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto bounce-in">
                       <service.icon className="h-8 w-8 text-primary" />
                     </div>
                   </div>
@@ -159,7 +159,7 @@ const Home = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={testimonial.name} className="card-elegant">
+              <Card key={testimonial.name} className={`card-elegant fade-in-up delay-${index + 1}`}>
                 <CardContent className="p-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (

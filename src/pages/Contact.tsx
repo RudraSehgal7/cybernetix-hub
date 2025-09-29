@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import { z } from 'zod';
 
 const contactSchema = z.object({
@@ -257,7 +258,10 @@ const Contact = () => {
                     size="lg"
                   >
                     {isSubmitting ? (
-                      <>Sending...</>
+                      <>
+                        <LoadingSpinner size="sm" className="mr-2" />
+                        Sending...
+                      </>
                     ) : (
                       <>
                         Send Message
