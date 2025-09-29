@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to Rudras New Website project
 
 ## Project info
 
